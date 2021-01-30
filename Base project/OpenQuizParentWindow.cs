@@ -62,6 +62,7 @@ namespace Base_project
                 Document document = new Document(PageSize.A4.Rotate());
                 try
                 {
+                    MessageBox.Show(richTextBoxContentdisplayer.Text);
                     PdfWriter.GetInstance(document, new FileStream(saveFileDialog.FileName, FileMode.Create));
                     document.Open();
                     document.Add(new Paragraph(richTextBoxContentdisplayer.Text));
